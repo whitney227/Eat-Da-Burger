@@ -8,9 +8,10 @@ var burger = {
             cb(res);
         })
     },
-    create: function() {
-        orm.create("burgers", )
+    create: function(name, cb) {
+        orm.create("burgers", name, cb);
     },
+    
     update: function(id, cb) {
         orm.update("burgers", id, cb);
     }
