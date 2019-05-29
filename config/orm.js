@@ -2,14 +2,14 @@ var connection = require("./connection.js");
 
 //create methods for MySQL commands
 var orm = {
-    //selectAll method
+    //select method
     all: function(tableInput, cb) {
         connection.query('SELECT * FROM '+tableInput+';', function(err, result){
             if(err)throw err;
             cb(result)
         });
     },
-    //insertOne method
+    //insert method
     create: function() {
         
         connection.query(function(err, result) {
@@ -18,14 +18,14 @@ var orm = {
         });
     },
 
-    //updateOne method
-    update: function( ) {
-        
-        connection.query(queryString, function(err, result) {
+    //update method
+    update: function(tableInput, condition, cb) {  
+        connection.query('UPDATE '+tableInput+' SET devoured=true WHERE id='+condition+';',
+        function(err,result){
             if (err)throw err;
-            cb(result);
+            cb(result); 
         });
-    }
-};
-
+    },
+}
+ 
 module.exports = orm;
