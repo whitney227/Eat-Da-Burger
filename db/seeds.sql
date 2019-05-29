@@ -1,3 +1,3 @@
-INSERT INTO burgers (burger_name) VALUES ("Black and Blue");
-INSERT INTO burgers (burger_name) VALUES ("Quarter Pounder");
-INSERT INTO burgers (burger_name) VALUES ("Black Bean");
+INSERT INTO burgers (burger_name, devoured) VALUES ("Black and Blue", true);
+INSERT INTO burgers (burger_name, devoured) VALUES ("Quarter Pounder", false);
+INSERT INTO burgers (burger_name, devoured) VALUES ("Black Bean", false);
