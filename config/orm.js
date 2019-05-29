@@ -9,6 +9,7 @@ var orm = {
             cb(result)
         });
     },
+    
     //insert method
     create: function(tableInput, val, cb) {
         connection.query('INSERT INTO '+tableInput+" (burger_name) VALUES ('"+val+"');",
